@@ -1,0 +1,165 @@
+:root {
+  --primary-color: #006847;
+  --secondary-color: #ce1126;
+  --dark-color: #1f2933;
+  --light-color: #ffffff;
+  --background-color: #f4f4f4;
+  --card-background: rgba(255, 255, 255, 0.92);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--dark-color);
+  font-family: var(--body-font);
+}
+
+header {
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-align: center;
+  border-bottom: 8px solid var(--secondary-color);
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--heading-font);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero picture,
+.hero picture img {
+  display: block;
+  width: 100%;
+}
+
+.hero picture img {
+  height: auto;
+  object-fit: cover;
+}
+
+.information-card {
+  margin: 1rem;
+  background-color: var(--light-color);
+  box-shadow: 0 3px 10px var(--shadow-color);
+}
+
+.information-card h2 {
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-align: center;
+}
+
+.information {
+  padding: 1rem 1.5rem;
+}
+
+.information p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0.7rem 0;
+}
+
+.information strong {
+  text-align: right;
+}
+
+.information span {
+  text-align: left;
+}
+
+.weather-icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 1rem auto 0;
+}
+
+footer {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-align: center;
+  border-top: 8px solid var(--secondary-color);
+}
+
+footer p {
+  margin: 0.4rem;
+}
+
+#lastModified {
+  font-size: 0.9rem;
+  color: #fff3b0;
+}
+
+/* Larger screen layout */
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 650px;
+  }
+
+  .hero picture img {
+    width: 100%;
+    min-height: 650px;
+    max-height: 750px;
+    object-fit: cover;
+  }
+
+  .information-card {
+    position: absolute;
+    width: 330px;
+    margin: 0;
+    background-color: var(--card-background);
+  }
+
+  .information-card h2 {
+    position: relative;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    text-align: left;
+  }
+
+  .data-card {
+    top: 3rem;
+    left: 3rem;
+  }
+
+  .weather-card {
+    right: 3rem;
+    bottom: 3rem;
+  }
+
+  .weather-title::after {
+    content: " ⛅";
+    margin-left: 0.5rem;
+  }
+
+  .weather-icon {
+    display: none;
+  }
+}

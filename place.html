@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="A responsive page about Monterrey, Nuevo León, created by Alexis Rivera."
+  >
+  <meta name="author" content="Alexis Rivera">
+
+  <title>Monterrey, Mexico | Alexis Rivera</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles/place.css">
+
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Monterrey</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source
+          srcset="images/monterrey-large.webp"
+          media="(min-width: 768px)"
+        >
+
+        <img
+          src="images/monterrey-small.webp"
+          alt="View of Monterrey and Cerro de la Silla"
+          width="600"
+          height="800"
+        >
+      </picture>
+
+      <section class="information-card data-card">
+        <h2>Data</h2>
+
+        <div class="information">
+          <p>
+            <strong>Country:</strong>
+            <span>Mexico</span>
+          </p>
+
+          <p>
+            <strong>State:</strong>
+            <span>Nuevo León</span>
+          </p>
+
+          <p>
+            <strong>Population:</strong>
+            <span>About 1.1 million</span>
+          </p>
+
+          <p>
+            <strong>Language:</strong>
+            <span>Spanish</span>
+          </p>
+
+          <p>
+            <strong>Currency:</strong>
+            <span>Mexican Peso</span>
+          </p>
+
+          <p>
+            <strong>Time Zone:</strong>
+            <span>UTC-6</span>
+          </p>
+
+          <p>
+            <strong>Famous Landmark:</strong>
+            <span>Cerro de la Silla</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="information-card weather-card">
+        <h2 class="weather-title">Weather</h2>
+
+        <img
+          class="weather-icon"
+          src="images/weather.svg"
+          alt="Partly cloudy weather"
+          width="80"
+          height="80"
+        >
+
+        <div class="information">
+          <p>
+            <strong>Temperature:</strong>
+            <span><span id="temperature">8</span> °C</span>
+          </p>
+
+          <p>
+            <strong>Conditions:</strong>
+            <span>Partly Cloudy</span>
+          </p>
+
+          <p>
+            <strong>Wind:</strong>
+            <span><span id="wind-speed">12</span> km/h</span>
+          </p>
+
+          <p>
+            <strong>Wind Chill:</strong>
+            <span id="wind-chill">Calculating...</span>
+          </p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span>
+      Alexis Rivera | Monterrey, Mexico
+    </p>
+
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
