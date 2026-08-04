@@ -1,4 +1,6 @@
-/* ---------- Global ---------- */
+/* ==========================
+   Global Styles
+========================== */
 
 * {
     margin: 0;
@@ -7,26 +9,28 @@
 }
 
 :root {
-    --primary: #1f4e79;
-    --primary-dark: #163a5c;
-    --background: #f4f7fb;
-    --surface: #ffffff;
-    --border: #d8dee6;
-    --text: #222222;
-    --required: #b00020;
+    --primary-color: #0d47a1;
+    --primary-hover: #08306b;
+    --background-color: #f4f4f4;
+    --card-color: #ffffff;
+    --border-color: #d6d6d6;
+    --text-color: #222;
+    --required-color: #c62828;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--background);
-    color: var(--text);
+    background: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-/* ---------- Header ---------- */
+/* ==========================
+   Header
+========================== */
 
 header {
-    background: var(--primary);
+    background: var(--primary-color);
     color: white;
     text-align: center;
     padding: 2rem 1rem;
@@ -36,18 +40,22 @@ header h1 {
     font-size: 2rem;
 }
 
-/* ---------- Main ---------- */
+/* ==========================
+   Main
+========================== */
 
 main {
-    max-width: 800px;
+    max-width: 750px;
     margin: 2rem auto;
-    background: var(--surface);
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    background: var(--card-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.12);
 }
 
-/* ---------- Form ---------- */
+/* ==========================
+   Form
+========================== */
 
 form {
     display: flex;
@@ -61,15 +69,17 @@ form {
 }
 
 label {
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: .5rem;
 }
 
 .required {
-    color: var(--required);
+    color: var(--required-color);
 }
 
-/* ---------- Inputs ---------- */
+/* ==========================
+   Inputs
+========================== */
 
 input[type="text"],
 input[type="date"],
@@ -77,149 +87,164 @@ select,
 textarea {
     width: 100%;
     padding: .8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
     font-size: 1rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: white;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 3px solid #7cb9ff;
+    outline: 3px solid #90caf9;
     outline-offset: 2px;
 }
 
-/* ---------- Fieldsets ---------- */
+/* ==========================
+   Fieldsets
+========================== */
 
 fieldset {
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1rem;
 }
 
 legend {
     font-weight: bold;
-    padding: 0 .4rem;
+    padding: 0 .5rem;
 }
 
-/* ---------- Rating ---------- */
+/* ==========================
+   Rating
+========================== */
 
 .rating {
     display: flex;
-    flex-direction: column;
-    gap: .6rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.rating input[type="radio"] {
+    margin-right: .25rem;
 }
 
 .rating label {
-    display: flex;
-    align-items: center;
-    gap: .6rem;
+    font-size: 1.4rem;
     cursor: pointer;
     font-weight: normal;
 }
 
-/* ---------- Checkboxes ---------- */
+/* ==========================
+   Checkboxes
+========================== */
 
 .checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: .6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+}
+
+.checkbox-group input {
+    margin-right: .4rem;
 }
 
 .checkbox-group label {
-    display: flex;
-    align-items: center;
-    gap: .6rem;
     font-weight: normal;
 }
 
-/* ---------- Textarea ---------- */
-
-textarea {
-    resize: vertical;
-    min-height: 140px;
-}
-
-/* ---------- Button ---------- */
+/* ==========================
+   Buttons
+========================== */
 
 .submit-btn,
 input[type="submit"] {
-    background: var(--primary);
+    background: var(--primary-color);
     color: white;
     border: none;
     padding: 1rem;
-    border-radius: 6px;
     font-size: 1rem;
-    font-weight: bold;
+    border-radius: 6px;
     cursor: pointer;
-    text-decoration: none;
     text-align: center;
-    transition: background .25s ease;
+    text-decoration: none;
+    transition: background .3s;
 }
 
 .submit-btn:hover,
 input[type="submit"]:hover {
-    background: var(--primary-dark);
+    background: var(--primary-hover);
 }
 
-/* ---------- Confirmation Page ---------- */
+/* ==========================
+   Confirmation Page
+========================== */
 
 .confirmation {
     text-align: center;
 }
 
-.review-counter {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: #eef5fc;
-    border-radius: 10px;
+.confirmation-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.review-counter h3 {
-    margin-bottom: .5rem;
+.review-counter {
+    background: #eef4ff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
 }
 
 #reviewCount {
     font-size: 3rem;
+    color: var(--primary-color);
     font-weight: bold;
-    color: var(--primary);
 }
 
-.back-btn {
-    display: inline-block;
-    margin-top: 1rem;
-}
-
-/* ---------- Footer ---------- */
+/* ==========================
+   Footer
+========================== */
 
 footer {
     text-align: center;
     padding: 2rem 1rem;
     color: #555;
-    font-size: .9rem;
 }
 
-/* ---------- Screen Reader Only ---------- */
-
-.sr-only {
-    position: absolute;
-    left: -10000px;
+footer p {
+    margin: .3rem 0;
 }
 
-/* ---------- Responsive ---------- */
+/* ==========================
+   Responsive
+========================== */
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+
+    main {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
 
     .rating {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .checkbox-group {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
     }
 
 }

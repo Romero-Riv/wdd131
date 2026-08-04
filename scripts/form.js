@@ -1,7 +1,3 @@
-// ================================
-// Product Array
-// ================================
-
 const products = [
     {
         id: "fc-1888",
@@ -30,11 +26,11 @@ const products = [
     }
 ];
 
-// ================================
+// ==========================================
 // Populate Product Select
-// ================================
+// ==========================================
 
-const productSelect = document.querySelector("#product");
+const productSelect = document.getElementById("product");
 
 if (productSelect) {
 
@@ -51,27 +47,27 @@ if (productSelect) {
 
 }
 
-// ================================
-// Footer
-// ================================
+// ==========================================
+// Footer Information
+// ==========================================
 
-const currentYear = document.querySelector("#currentYear");
+const currentYear = document.getElementById("currentYear");
 
 if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
 }
 
-const lastModified = document.querySelector("#lastModified");
+const lastModified = document.getElementById("lastModified");
 
 if (lastModified) {
     lastModified.textContent = `Last Modified: ${document.lastModified}`;
 }
 
-// ================================
-// Review Counter
-// ================================
+// ==========================================
+// Review Counter (review.html only)
+// ==========================================
 
-const reviewCount = document.querySelector("#reviewCount");
+const reviewCount = document.getElementById("reviewCount");
 
 if (reviewCount) {
 
