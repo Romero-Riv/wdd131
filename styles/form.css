@@ -1,0 +1,225 @@
+/* ---------- Global ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1f4e79;
+    --primary-dark: #163a5c;
+    --background: #f4f7fb;
+    --surface: #ffffff;
+    --border: #d8dee6;
+    --text: #222222;
+    --required: #b00020;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* ---------- Main ---------- */
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+/* ---------- Form ---------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.required {
+    color: var(--required);
+}
+
+/* ---------- Inputs ---------- */
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: .8rem;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #7cb9ff;
+    outline-offset: 2px;
+}
+
+/* ---------- Fieldsets ---------- */
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 .4rem;
+}
+
+/* ---------- Rating ---------- */
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.rating label {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* ---------- Checkboxes ---------- */
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-weight: normal;
+}
+
+/* ---------- Textarea ---------- */
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* ---------- Button ---------- */
+
+.submit-btn,
+input[type="submit"] {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background .25s ease;
+}
+
+.submit-btn:hover,
+input[type="submit"]:hover {
+    background: var(--primary-dark);
+}
+
+/* ---------- Confirmation Page ---------- */
+
+.confirmation {
+    text-align: center;
+}
+
+.review-counter {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #eef5fc;
+    border-radius: 10px;
+}
+
+.review-counter h3 {
+    margin-bottom: .5rem;
+}
+
+#reviewCount {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #555;
+    font-size: .9rem;
+}
+
+/* ---------- Screen Reader Only ---------- */
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (min-width: 768px) {
+
+    .rating {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .checkbox-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+}
