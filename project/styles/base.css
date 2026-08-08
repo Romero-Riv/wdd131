@@ -465,15 +465,37 @@ section h2{
    FOOTER
 ===================================================== */
 
-footer{
+/* ==========================================
+   FOOTER
+========================================== */
 
-    text-align:center;
+footer {
 
-    padding:40px;
+    margin-top: 60px;
 
-    border-top:2px solid var(--green-dark);
+    padding: 30px 20px;
 
-    margin-top:80px;
+    text-align: center;
+
+    border-top: 1px solid var(--green-dark);
+
+    color: var(--green);
+
+}
+
+footer p {
+
+    margin: 8px 0;
+
+}
+
+.footer-note {
+
+    font-size: 0.75rem;
+
+    color: var(--green-dark);
+
+    letter-spacing: 1px;
 
 }
 
