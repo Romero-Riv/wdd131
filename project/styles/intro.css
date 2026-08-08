@@ -1,0 +1,219 @@
+/* ==========================================
+   INTRO SCREEN
+========================================== */
+
+#intro {
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+
+}
+
+
+/* ==========================================
+   CODEC
+========================================== */
+
+.codec {
+
+    width: 100%;
+    max-width: 1000px;
+
+    display: grid;
+
+    grid-template-columns: 170px 1fr 170px;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+
+}
+
+
+/* ==========================================
+   CODEC IMAGES
+========================================== */
+
+.codec img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+/* Character portraits */
+
+.codec img:first-child,
+.codec img:last-child {
+
+    border: 1px solid var(--green-dark);
+
+}
+
+
+/* Main codec */
+
+.codec img:nth-child(2) {
+
+    border: 1px solid var(--green-dark);
+
+}
+
+
+/* ==========================================
+   INTRO TEXT
+========================================== */
+
+.intro-text {
+
+    text-align: center;
+
+    max-width: 700px;
+
+}
+
+
+.intro-text h1 {
+
+    font-size: 2.2rem;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.intro-text p {
+
+    font-size: 1.1rem;
+
+    margin-bottom: 35px;
+
+    color: var(--green-light);
+
+}
+
+
+/* ==========================================
+   CONNECT BUTTON
+========================================== */
+
+#connectButton {
+
+    min-width: 220px;
+
+    padding: 14px 30px;
+
+    font-size: 1.1rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+#connectButton:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ==========================================
+   TYPING CURSOR
+========================================== */
+
+#typing::after {
+
+    content: "▋";
+
+    margin-left: 7px;
+
+    color: var(--green);
+
+    animation: blink .8s infinite;
+
+}
+
+
+@keyframes blink {
+
+    50% {
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 800px) {
+
+    .codec {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        max-width: 500px;
+
+    }
+
+
+    .codec img:first-child,
+    .codec img:last-child {
+
+        width: 140px;
+
+        margin: auto;
+
+    }
+
+
+    .codec img:nth-child(2) {
+
+        max-width: 450px;
+
+        margin: auto;
+
+    }
+
+
+    .intro-text h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .intro-text p {
+
+        font-size: 1rem;
+
+    }
+
+
+    #connectButton {
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+}

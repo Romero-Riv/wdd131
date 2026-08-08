@@ -1,0 +1,199 @@
+/* ==========================================
+   TIMELINE HEADER
+========================================== */
+
+.timeline-header {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 50px auto;
+
+}
+
+.timeline-header h2 {
+
+    margin: 15px 0;
+
+}
+
+.timeline-header p {
+
+    color: var(--green-light);
+
+}
+
+
+/* ==========================================
+   TIMELINE
+========================================== */
+
+.timeline {
+
+    max-width: 900px;
+
+    margin: 60px auto;
+
+    position: relative;
+
+}
+
+
+/* Vertical line */
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 2px;
+
+    background: var(--green-dark);
+
+    transform: translateX(-50%);
+
+}
+
+
+/* ==========================================
+   TIMELINE ITEM
+========================================== */
+
+.timeline-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 60px;
+
+    position: relative;
+
+}
+
+
+/* ==========================================
+   YEAR
+========================================== */
+
+.timeline-year {
+
+    width: 45%;
+
+    text-align: right;
+
+    padding-right: 40px;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 1.5rem;
+
+    color: var(--green);
+
+    text-shadow: 0 0 8px var(--green);
+
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.timeline-content {
+
+    width: 45%;
+
+    background: var(--panel);
+
+    border: 2px solid var(--green-dark);
+
+    padding: 25px;
+
+    transition: .3s;
+
+}
+
+.timeline-content:hover {
+
+    border-color: var(--green);
+
+    box-shadow: 0 0 15px rgba(140, 255, 178, .25);
+
+}
+
+.timeline-content h3 {
+
+    margin-bottom: 15px;
+
+}
+
+.timeline-content p {
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+}
+
+.timeline-content span {
+
+    color: var(--green);
+
+    font-size: .85rem;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 700px) {
+
+    .timeline {
+
+        margin-left: 20px;
+
+    }
+
+    .timeline::before {
+
+        left: 0;
+
+    }
+
+    .timeline-item {
+
+        display: block;
+
+        margin-left: 20px;
+
+    }
+
+    .timeline-year {
+
+        width: 100%;
+
+        text-align: left;
+
+        padding: 0 0 10px 20px;
+
+    }
+
+    .timeline-content {
+
+        width: 100%;
+
+    }
+
+}

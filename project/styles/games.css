@@ -1,0 +1,177 @@
+/* ==========================================
+   GAMES PAGE
+========================================== */
+
+.database {
+
+    max-width: 1400px;
+
+    margin: 50px auto;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    gap: 60px;
+
+    align-items: flex-start;
+
+}
+
+/* ==========================================
+   LEFT PANEL
+========================================== */
+
+.mission-list {
+
+    width: 280px;
+
+}
+
+.mission-list h2 {
+
+    margin-bottom: 25px;
+
+    color: var(--green);
+
+}
+
+.mission-list ul {
+
+    list-style: none;
+
+}
+
+.mission-list li {
+
+    padding: 12px 15px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    border-left: 3px solid transparent;
+
+}
+
+.mission-list li:hover {
+
+    background: rgba(140,255,178,.08);
+
+    border-left: 3px solid var(--green);
+
+}
+
+.mission-list li.active {
+
+    background: rgba(140,255,178,.12);
+
+    border-left: 3px solid var(--green);
+
+    font-weight: bold;
+
+}
+
+.mission-list li.active::before {
+
+    content: "► ";
+
+    color: var(--green);
+
+}
+
+/* ==========================================
+   RIGHT PANEL
+========================================== */
+
+.game-info {
+
+    flex: 1;
+
+    background: var(--panel);
+
+    border: 2px solid var(--green-dark);
+
+    padding: 35px;
+
+    border-radius: 6px;
+
+    box-shadow: 0 0 15px rgba(140,255,178,.15);
+
+}
+
+.game-info img {
+
+    display: block;
+
+    width: 300px;
+
+    margin: 0 auto 25px;
+
+    border: 2px solid var(--green);
+
+    box-shadow: 0 0 15px rgba(140,255,178,.35);
+
+}
+
+.game-info h1 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+.info {
+
+    margin-bottom: 25px;
+
+}
+
+.info p {
+
+    margin-bottom: 10px;
+
+}
+
+#gameDescription {
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+}
+
+#favoriteButton {
+
+    display: block;
+
+    margin: auto;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 900px) {
+
+    .database {
+
+        flex-direction: column;
+
+    }
+
+    .mission-list {
+
+        width: 100%;
+
+    }
+
+    .game-info img {
+
+        width: 220px;
+
+    }
+
+}

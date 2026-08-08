@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Alexis Rivera">
+    <meta name="description" content="Browse every Metal Gear game in the FOXHOUND Database.">
+
+    <title>Games | Metal Gear Solid Encyclopedia</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/games.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <script src="scripts/games.js" defer></script>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <img src="images/logo.avif" alt="Metal Gear Solid Encyclopedia Logo">
+
+        <h1>FOXHOUND DATABASE</h1>
+
+    </div>
+
+    <nav>
+
+        <ul class="navigation">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a class="current" href="games.html">Games</a></li>
+
+            <li><a href="characters.html">Characters</a></li>
+
+            <li><a href="timeline.html">Timeline</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main class="database">
+
+    <!-- LEFT PANEL -->
+
+    <aside class="mission-list">
+
+        <h2>GAME DATABASE</h2>
+
+        <ul id="gameList">
+
+            <li class="active" data-id="0">Metal Gear</li>
+
+            <li data-id="1">Metal Gear 2: Solid Snake</li>
+
+            <li data-id="2">Metal Gear Solid</li>
+
+            <li data-id="3">Metal Gear Solid 2</li>
+
+            <li data-id="4">Metal Gear Solid 3</li>
+
+            <li data-id="5">Peace Walker</li>
+
+            <li data-id="6">Ground Zeroes</li>
+
+            <li data-id="7">The Phantom Pain</li>
+
+        </ul>
+
+    </aside>
+
+    <!-- RIGHT PANEL -->
+
+    <section class="game-info">
+
+        <div class="game-cover">
+
+            <p class="classified">
+                CLASSIFIED FILE
+            </p>
+
+            <img
+                id="gameImage"
+                src="images/games/mg1.jpg"
+                alt="Game Cover"
+                 loading="lazy"
+                 >
+
+        </div>
+
+        <div class="game-details">
+
+            <h1 id="gameTitle">
+
+                Metal Gear
+
+            </h1>
+
+            <div class="info">
+
+                <p>
+
+                    <strong>Release:</strong>
+
+                    <span id="gameYear">
+
+                        1987
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Platform:</strong>
+
+                    <span id="gamePlatform">
+
+                        MSX2
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Developer:</strong>
+
+                    <span id="gameDeveloper">
+
+                        Konami
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Genre:</strong>
+
+                    <span id="gameGenre">
+
+                        Stealth Action
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Rating:</strong>
+
+                    <span id="gameRating">
+
+                        ★★★★★
+
+                    </span>
+
+                </p>
+
+            </div>
+
+            <p id="gameDescription">
+
+                Solid Snake infiltrates Outer Heaven to destroy the first Metal Gear weapon before it can threaten the world.
+
+            </p>
+
+            <button id="favoriteButton">
+
+                Add to Favorites
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+
+        FOXHOUND DATABASE ©
+
+        <span id="year"></span>
+
+    </p>
+
+    <p>
+
+        Metal Gear Solid Encyclopedia | WDD 131 Final Project
+
+    </p>
+
+</footer>
+
+</body>
+
+</html>

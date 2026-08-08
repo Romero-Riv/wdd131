@@ -1,0 +1,233 @@
+/* ==========================================
+   CHARACTERS PAGE
+========================================== */
+
+.personnel-database {
+
+    max-width: 1400px;
+
+    margin: 50px auto;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    gap: 60px;
+
+    align-items: flex-start;
+
+}
+
+/* ==========================================
+   CHARACTER LIST
+========================================== */
+
+.character-list {
+
+    width: 280px;
+
+    flex-shrink: 0;
+
+}
+
+.character-list h2 {
+
+    margin-bottom: 25px;
+
+}
+
+.character-list ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+.character-list li {
+
+    padding: 12px 15px;
+
+    cursor: pointer;
+
+    border-left: 3px solid transparent;
+
+    transition: .3s;
+
+}
+
+.character-list li:hover {
+
+    background: rgba(140, 255, 178, .08);
+
+    border-left-color: var(--green);
+
+}
+
+.character-list li.active {
+
+    background: rgba(140, 255, 178, .12);
+
+    border-left-color: var(--green);
+
+    font-weight: bold;
+
+}
+
+.character-list li.active::before {
+
+    content: "► ";
+
+    color: var(--green);
+
+}
+
+/* ==========================================
+   CHARACTER INFORMATION
+========================================== */
+
+.character-info {
+
+    flex: 1;
+
+    display: flex;
+
+    gap: 40px;
+
+    background: var(--panel);
+
+    border: 2px solid var(--green-dark);
+
+    padding: 35px;
+
+    box-shadow: 0 0 15px rgba(140, 255, 178, .15);
+
+}
+
+/* ==========================================
+   CHARACTER IMAGE
+========================================== */
+
+.character-image {
+
+    flex: 0 0 280px;
+
+}
+
+.character-image img {
+
+    display: block;
+
+    width: 100%;
+
+    border: 2px solid var(--green);
+
+    box-shadow: 0 0 15px rgba(140, 255, 178, .35);
+
+}
+
+.classified {
+
+    text-align: center;
+
+    color: var(--green);
+
+    letter-spacing: 2px;
+
+    font-size: .85rem;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--green-dark);
+
+}
+
+/* ==========================================
+   CHARACTER DETAILS
+========================================== */
+
+.character-details {
+
+    flex: 1;
+
+}
+
+.character-details h1 {
+
+    margin-bottom: 10px;
+
+}
+
+.codename {
+
+    color: var(--green);
+
+    margin-bottom: 25px;
+
+}
+
+.info {
+
+    margin-bottom: 25px;
+
+}
+
+.info p {
+
+    margin-bottom: 8px;
+
+}
+
+.info strong {
+
+    color: var(--green);
+
+}
+
+#characterDescription {
+
+    line-height: 1.8;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 900px) {
+
+    .personnel-database {
+
+        flex-direction: column;
+
+        gap: 30px;
+
+    }
+
+    .character-list {
+
+        width: 100%;
+
+    }
+
+    .character-info {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+    .character-image {
+
+        width: 100%;
+
+        max-width: 280px;
+
+        margin: auto;
+
+    }
+
+}
